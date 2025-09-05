@@ -2,11 +2,11 @@
 {
     public static void Main()
     {
-        Console.WriteLine("Skriv in för och efternamn");
+        Console.Clear();
+        Console.Write("Skriv in för- och efternamn: ");
 
         string correctName = Capital.MakeCapital(Console.ReadLine());
 
         System.Console.WriteLine(correctName);
-        
     }
 }
