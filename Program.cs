@@ -2,11 +2,17 @@
 {
     public static void Main()
     {
-        Console.Clear();
-        Console.Write("Skriv in för- och efternamn: ");
+        bool goOn = true;
+        while (goOn)
+        {
+            Console.Clear();
+            Console.Write("Skriv in för- och efternamn: ");
 
-        string correctName = Capital.MakeCapital(Console.ReadLine());
+            string correctName = Capital.MakeCapital(Console.ReadLine());
 
-        System.Console.WriteLine(correctName);
+            System.Console.WriteLine(correctName);
+        }
+        
+
     }
 }

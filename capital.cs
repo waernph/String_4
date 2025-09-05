@@ -12,7 +12,8 @@ public class Capital
         string firstNameSmall = firstName.ToLower();
         string lastNameSmall = lastName.ToLower();
         string capitalizedFirstName = first + firstNameSmall.Substring(1) + " " + last + lastNameSmall.Substring(1);
-
+        string hej;
         return capitalizedFirstName;
+        
     }
 }
