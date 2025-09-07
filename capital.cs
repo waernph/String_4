@@ -2,16 +2,13 @@ public class Capital
 {
     public static string MakeCapital(string input)
     {
-        string name = input;
-        string nameCapital = name.ToUpper();
+        string name = input.ToLower();
         int pos = name.IndexOf(" ");
-        string firstName = nameCapital.Substring(0, pos);
-        string lastName = nameCapital.Substring(pos + 1);
-        char first = firstName[0];
-        char last = lastName[0];
-        string firstNameSmall = firstName.ToLower();
-        string lastNameSmall = lastName.ToLower();
-        string capitalizedFirstName = first + firstNameSmall.Substring(1) + " " + last + lastNameSmall.Substring(1);
-        return capitalizedFirstName;   
+        string firstName = name.Substring(0, pos);
+        string lastName = name.Substring(pos + 1);
+        char first = char.ToUpper(firstName[0]);
+        char last = char.ToUpper(lastName[0]);
+        string capitalizedFirstName = first + firstName.Substring(1) + " " + last + lastName.Substring(1);
+        return capitalizedFirstName;
     }
 }
