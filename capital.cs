@@ -1,26 +1,14 @@
 using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
 public class Capital
 {
-    public static string MakeCapital(string input)
-    {
-        string name = input.ToLower();
-        int pos = name.IndexOf(" ");
-        string firstName = name.Substring(0, pos);
-        string lastName = name.Substring(pos + 1);
-        char first = char.ToUpper(firstName[0]);
-        char last = char.ToUpper(lastName[0]);
-        string capitalizedFirstName =
-            first + firstName.Substring(1) + " " + last + lastName.Substring(1);
-        return capitalizedFirstName;
-    }
-
-    public static string NoSpaces(string input)
+    public static string MakeInitialCaseToUpper(string input)
     {
         string name = input.ToLower();
         string[] words = name.Split(" ");
-        string output = "";
         int length = words.Length;
+        string output = "";
 
         for (var i = 0; i < length; i++)
         {
@@ -29,5 +17,12 @@ public class Capital
             output += first + words[i] + " ";
         }
         return output;
+    }
+
+    public static object ToDict(string key, string value)
+    {
+        Dictionary<string, string> nameReigster = new Dictionary<string, string>();
+        nameReigster.Add("key", "value");
+        return nameReigster;
     }
 }
