@@ -1,6 +1,3 @@
-using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-
 public class Capital
 {
     public static string MakeInitialCaseToUpper(string input)
@@ -9,7 +6,6 @@ public class Capital
         string[] words = name.Split(" ");
         int length = words.Length;
         string output = "";
-        
         for (var i = 0; i < length; i++)
         {
             char first = char.ToUpper(words[i][0]);
@@ -24,8 +20,10 @@ public class Capital
 
     public static object ToDict(string key, string value)
     {
-        Dictionary<string, string> nameReigster = new Dictionary<string, string>();
-        nameReigster.Add("key", "value");
+        Dictionary<string, string> nameReigster = new()
+        {
+            { key, value }
+        };
         return nameReigster;
     }
 }
