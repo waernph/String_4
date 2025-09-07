@@ -9,7 +9,7 @@ public class Capital
         string[] words = name.Split(" ");
         int length = words.Length;
         string output = "";
-
+        
         for (var i = 0; i < length; i++)
         {
             char first = char.ToUpper(words[i][0]);
