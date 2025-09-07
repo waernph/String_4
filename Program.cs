@@ -7,8 +7,8 @@
         {
             Console.Clear();
             Console.Write("Skriv in för- och efternamn: ");
-            string correctName = Capital.MakeCapital(Console.ReadLine());
-            System.Console.WriteLine(correctName);
+            string correctNaming = Capital.MakeInitialCaseToUpper(Console.ReadLine());
+            Console.WriteLine(correctNaming);
             Console.ReadKey();
         }
     }
